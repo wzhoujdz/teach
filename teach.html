@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+	</style>
+	<script>
+		function main(){
+			var number  = [5,6,2,78,21,555];
+			var pass = functionPassValue(number);
+			console.log(pass);
+		}
+		function functionPassValue(num){
+			for (i=1;i<num.length;i=i+1){
+				for(a=0;a<num.length-i;a++){
+					if (num[a]<num[a+1]){
+						var smaller = num[a];
+						num[a]=num[a+1];
+						num[a+1]=smaller;
+					}
+				}
+			}
+			
+			return(num);
+		}
+
+	
+	</script>
+</head>
+<body onload="main()" >
+新建一个文件putNewParamIntoArrayExercise5
+给一个数组，将数组传入子方法中，对该数组进行处理
+将数组进行从小到大排序，之后再将该数组镜像化，将处理完的数组返回给主方法
+在主方法中输出处理后的数组
+例：
+[33,4545,23232,112,2,6]
+输出
+[2,6,33,112,4545,23232,23232,4545,112,33,6,2]
+
+
+</body>
+
+
+
+</html>
+
+
+
